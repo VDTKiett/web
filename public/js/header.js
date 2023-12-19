@@ -168,6 +168,53 @@ closecart.addEventListener("click", () =>{
 });
 // EVENT CART: END
 
+//EVENT CONTACT: START
+const contact = document.getElementById("contact")
+const btnContact = document.getElementById("btn-contact");
+const closeContact = document.getElementById('close-contact');
+
+btnContact.addEventListener("click", () =>{
+    contact.classList.add('show-contact');
+});
+closeContact.addEventListener('click', () => {
+    contact.classList.toggle('show-contact');
+    overlayRight.style.display = "none";
+});
+//EVENT CONTACT: END
+
+//EVENT LOGIN: START
+const login = document.getElementById("login");
+const btnLogin = document.getElementById("btn-login");
+const btnLoginMobile = document.getElementById("btn-login-mobile")
+const closeLogin = document.getElementById('close-login');
+
+btnLogin.addEventListener("click", () =>{
+    login.classList.add('show-login');
+    login.style.display ="block"
+});
+btnLoginMobile.addEventListener("click", () =>{
+    login.classList.add('show-login');
+    login.style.display ="block"
+});
+closeLogin.addEventListener('click', () => {
+    login.style.display = 'none';
+    overlayRight.style.display = "none";
+});
+
+function invalidateInput(){
+    var logintaikhoan = document.getElementsByClassName('login-tai-khoan');
+    var phoneNumber = document.getElementById('phoneNumber');
+    var phoneNumbervalue = phoneNumber.value;
+    if (phoneNumbervalue.trim() === '') {
+        logintaikhoan.classList.add('error-input');
+        return false; // Ngăn chặn việc submit form
+      } else {
+        logintaikhoan.classList.remove('error-input');
+        return true; // Cho phép submit form
+      }
+};
+//EVENT LOGIN: END
+
 //OPEN / CLOSE OVERLAY
 function on__left() {
     document.getElementById("overlay-left").style.display = "block";
@@ -196,6 +243,8 @@ function on__left() {
     searchInput.classList.remove('show-text');
     searchSuggest.classList.remove('show-text');
     cart.classList.remove('show');
+    contact.classList.remove('show-contact');
+    login.style.display = 'none';
   }
 
 // MENU MOBILE: START 
