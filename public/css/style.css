@@ -10,6 +10,7 @@
     width: 100%;
     height: 832px;
     display: flex;
+    flex-direction: row;
     
 }
 .slider-desc{
@@ -17,6 +18,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 50%;
+    height: 100%;
     
     padding: 30px 110px;
     flex: 1;
@@ -36,20 +38,21 @@
 .slider-img{
     
     width: 50%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .img-1 {
-    background-image: url('../img/img-slider_1.jpg');
+    background-image: url('../img/Hình\ slider_dau.jpg');
 }
 
 .img-2 {
-    background-image: url('../img/img-slider_2.jpg');
+    background-image: url('../img/img_slider_1.jpg');
 }
 
 .img-3 {
-    background-image: url('../img/img-slider_3.jpg');
+    background-image: url('../img/img_slider_2.jpg');
 }
 
 .See-more{
@@ -140,7 +143,7 @@
     transition: 0.5s;
 }
 .banner-grand{
-    background-image: url(/asset/img/index_bg_brand_triet_lí.jpg);
+    background-image: url("/public/img/index_bg_brand_triet_lí.png");
     background-size: cover;
     height: 40vw; 
     max-height: calc(100vh - (var(--promo-height) + var(--menu-height)));

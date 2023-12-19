@@ -8,7 +8,6 @@
 
     <!--Style of homepage-->
     <link rel="stylesheet" href="../../public/css/style.css">
-
     <!-- include config for header and footer -->
     <?php include '../../resources/head/fh_head.php' ?>
 
